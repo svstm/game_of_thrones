@@ -1,21 +1,23 @@
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
+// Инициализация слайдера для миниатюр
+const thumbsSwiper = new Swiper(".thumbs-swiper", {
+  slidesPerView: 3, // Показывать 3 миниатюры в строке
+  grid: {
+    rows: 3,
   },
 
-  // Navigation arrows
+  spaceBetween: 10, // Отступы между миниатюрами
+  watchSlidesProgress: true, // Следить за активным слайдом
+});
+
+// Инициализация основного слайдера
+const mainSwiper = new Swiper(".main-swiper", {
+  spaceBetween: 10,
+
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next1",
+    prevEl: ".swiper-button-prev1",
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
+  thumbs: {
+    swiper: thumbsSwiper, // Синхронизация с миниатюрами
   },
 });
