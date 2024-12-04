@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigations {
+  width: 534px;
+  height: 516px;
+  /* margin-top: 143px;
+  margin-left: 158px; */
+  gap: 10px;
+  opacity: 0px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+body {
+  background-color: black;
+  height: 100%;
+}
+
+.main-content {
+  margin: 143px 172px 144px 158px;
+  display: flex;
+  gap: 44px;
+  align-items: center;
+}
+
+.slider {
+  gap: 0px;
+  opacity: 0px;
+}
+
+.swiper {
+  width: 532px;
+  height: 516px;
+  background-color: rgba(43, 97, 145, 0.603);
+}
+p {
+  color: white;
+}
+.buttons {
+  width: 151px;
+  height: 151px;
+}
+.buttons img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
